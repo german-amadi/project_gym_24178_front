@@ -1,0 +1,50 @@
+
+@font-face {
+    font-family:"Monofett" ;
+    src: url(../fonts/Monofett-Regular.ttf) format("truetype");
+}
+
+.contenedor{
+    background-color: rgb(104, 104, 104);
+    margin: 10px;
+    display: grid;
+    gap: 10px;
+    grid-template:  "header header header"
+                    "nav nav nav"
+                    "main main aside"
+                    "footer footer footer";
+}
+
+.header{
+    font-family: "Monofett", monospace;
+    font-weight: 400;
+    font-style: normal;
+    grid-area: header;
+    background-color: rgb(255, 255, 255, 0.1);
+    
+}
+
+.nav{
+    background-color: rgb(255, 255, 255, 0.2);
+    align-content:end;
+    grid-area: nav;
+
+}
+
+.main{
+    background-color: rgb(255, 255, 255, 0.3);
+    grid-area: main;
+
+}
+
+.aside{
+    background-color: rgb(255, 255, 255, 0.4);
+    grid-area: aside;
+
+}
+
+.footer{
+    background-color: rgb(255, 255, 255, 0.5);
+    grid-area: footer;
+
+}
