@@ -1,45 +1,70 @@
 
 @font-face {
-    font-family:"Monofett" ;
-    src: url(../fonts/Monofett-Regular.ttf) format("truetype");
+    font-family:"Preahvihear" ;
+    src: url(../fonts/Preahvihear-Regular.ttf) format("truetype");
+
 }
+@font-face {
+    font-family:"Jersey15Charted-Regular" ;
+    src: url(../fonts/Jersey15Charted-Regular.ttf) format("truetype");
+}
+
 
 .contenedor{
     background-color: rgb(104, 104, 104);
-    margin: 10px;
+    margin: 0px 10px 0px 10px;
     display: grid;
-    gap: 10px;
-    grid-template:  "header header header"
-                    "nav nav nav"
-                    "main main aside"
+    gap: 0px;
+    grid-template:  "nav nav nav"
+                    "main main main"
                     "footer footer footer";
 }
 
-.header{
-    font-family: "Monofett", monospace;
-    font-weight: 400;
-    font-style: normal;
-    grid-area: header;
-    background-color: rgb(255, 255, 255, 0.1);
-    
-}
-
-.nav{
-    background-color: rgb(255, 255, 255, 0.2);
-    align-content:end;
+.nav {
     grid-area: nav;
+    position: sticky;
+    top: 0px;
+    font-family: "Jersey 15 Charted", sans-serif;
+    background-color: rgb(255, 255, 255, 0.4);
+    z-index: 1;
+    text-overflow: ellipsis;
+    height: 40px;
+    box-sizing: border-box;
+    align-content: center;
+    align-items: center;
+    text-align: right;
+    
 
 }
 
 .main{
-    background-color: rgb(255, 255, 255, 0.3);
+    background-color: rgba(0, 0, 0);
     grid-area: main;
 
 }
 
-.aside{
-    background-color: rgb(255, 255, 255, 0.4);
-    grid-area: aside;
+.home{
+    background-image: url(../images/5008.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    background-position: top -200px right;
+}
+
+.instalaciones{
+    background-color: rgba(0, 0, 0);
+    width: 100%;
+    height: 100vh;
+    color: darkgrey;
+
+}
+
+.clases{
+    background-color: rgb(100, 41, 41);
+    width: 100%;
+    height: 100vh;
+    color: darkgrey;
 
 }
 
@@ -47,4 +72,68 @@
     background-color: rgb(255, 255, 255, 0.5);
     grid-area: footer;
 
+}
+
+.navbtn > a{
+    color: rgb(236, 236, 236);
+    text-decoration: none;
+    padding: 0px 10px 0px 10px;
+}
+
+a:hover{
+    background-color: rgb(255, 255, 255, 0.5);
+    color: rgb(51, 51, 51);
+    border-radius: 5px;
+    transition: 0.5s;
+
+}
+
+ul li{
+    list-style: none;
+    display: inline-block;
+    box-sizing: border-box;    
+}
+
+.checkbtn{
+    cursor: pointer;
+    display: none;
+}
+
+.checkbtn:hover{
+    background-color: rgb(255, 255, 255, 0.5);
+    color: rgb(51, 51, 51);
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+#check{
+    display: none;
+}
+
+@media screen and (max-width: 1200px) {
+
+    .home{
+        width: 100%;
+        height: 100vh;
+        background-position: top -20px right;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .checkbtn {
+        text-align: center;
+        display: block;
+        margin: 30px;
+        height: 40px;
+    }
+
+    .navbtn{
+        display: none;
+    }
+    
+    .home{
+        width: 100%;
+        height: 100vh;
+    }
 }
