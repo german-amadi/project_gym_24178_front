@@ -62,7 +62,7 @@
         <ul class="insta_table">
           <li class="insta_list">
             <img class="icon-list" src="./icons/ancho.png" alt="" />
-            <p><strong>Superficie Total </strong> <br />28.000 m2</p>
+            <p><strong>Superficie Total</strong> <br />28.000 m2</p>
           </li>
           <li class="insta_list">
             <img
@@ -75,7 +75,7 @@
           <li class="insta_list">
             <img class="icon-list" src="./icons/nadando.png" alt="" />
             <p>
-              <strong>Superficie Total </strong> <br />1 piscina interior <br />
+              <strong>Piscina </strong> <br />1 piscina interior <br />
               1 exterior.
             </p>
           </li>
@@ -92,9 +92,21 @@
           </li>
         </ul>
       </div>
+      
+      <div class="carousel">
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <div class="slides">
+          <img class="img-carousel" src="./images/Carrusel_1.jpg" alt="">
+          <img class="img-carousel" src="./images/Carrusel_2.jpg" alt="">
+          <img class="img-carousel" src="./images/Carrusel_3.jpg" alt="">
+        </div>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+      </div>
+      
     </section>
 
     <section class="clases">
+
       <p>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil autem
         pariatur quasi enim aut nisi rem maiores rerum ex error ratione
@@ -123,36 +135,24 @@
     </section>
 
     <section class="equipo">
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil autem
-          pariatur quasi enim aut nisi rem maiores rerum ex error ratione
-          repudiandae, cum ad quibusdam modi magnam perspiciatis quod porro. Lorem
-          ipsum dolor sit amet consectetur adipisicing elit. Pariatur mollitia
-          dolore expedita est enim assumenda ullam sint, repellat, odio iure,
-          ipsum officia ea consequatur. Nisi sint fugit incidunt autem fuga! Lorem
-          ipsum dolor sit amet consectetur adipisicing elit. Consectetur alias
-          ratione quis earum veritatis maxime eius corporis magni, unde dicta
-          aliquam repellendus beatae impedit hic fugiat ipsa? Error, sequi
-          tempora. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea,
-          ducimus. Molestias non doloribus inventore rem laboriosam praesentium
-          ex. Assumenda veritatis aspernatur pariatur tempora voluptatibus
-          doloremque perferendis deleniti itaque fugiat ipsam. Lorem ipsum, dolor
-          sit amet consectetur adipisicing elit. Fugiat recusandae rem, unde fugit
-          impedit animi, rerum, officiis culpa fuga ipsam vel maxime optio
-          voluptas quaerat veniam nobis aut. Sit, sequi. Lorem, ipsum dolor sit
-          amet consectetur adipisicing elit. Officiis dolore, repudiandae, dicta
-          incidunt error repellendus illum quasi, in sed atque quos non fugiat
-          commodi harum porro est a modi iste! Lorem, ipsum dolor sit amet
-          consectetur adipisicing elit. Debitis molestiae asperiores minus
-          exercitationem excepturi illum, nemo explicabo temporibus numquam,
-          repellendus minima repudiandae, ea alias sint sequi atque? Ea, molestias
-          rerum!
-        </p>
+      <h4>Nuestros Profes</h4>
+      <div class="flip-cards">
+        <div class="flip-card1">
+          <div class="flip-card-front">
+            <img src="./images/Trainer1.jpg" alt="" style="width:300px" height="400px">
+          </div>
+          <div class="flip-card-back">
+            <h1>Juan Martinez</h1>
+            <p>Personal Trainer</p>
+            <p>Egresado de la UBA con 20 años de experiencia</p>
+          </div>
+        </div>
+      </div>
       </section>
 
       <section class="contactenos">
         <h4>¿Dónde Estamos?</h4>
-        <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d820.99954730162!2d-58.381185630441216!3d-34.604207298309625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzTCsDM2JzE1LjIiUyA1OMKwMjInNTAuMCJX!5e0!3m2!1ses!2sar!4v1714412412772!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0167117870783!2d-58.38551221747004!3d-34.60373891813143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e0!3m2!1ses!2sar!4v1714432503558!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         
         <form action="">
           <fieldset><legend>Escribinos</legend>
@@ -190,5 +190,8 @@
     <footer class="footer">
       <h6>pie de pagina</h6>
     </footer>
+
+    <script src="./js/script.js"></script>
+    
   </body>
 </html>
