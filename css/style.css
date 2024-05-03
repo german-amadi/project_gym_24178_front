@@ -1,353 +1,383 @@
-
 @font-face {
-    font-family:"Preahvihear" ;
-    src: url(../fonts/Preahvihear-Regular.ttf) format("truetype");
-
+  font-family: "Preahvihear";
+  src: url(../fonts/Preahvihear-Regular.ttf) format("truetype");
 }
 @font-face {
-    font-family:"Jersey15Charted-Regular" ;
-    src: url(../fonts/Jersey15Charted-Regular.ttf) format("truetype");
+  font-family: "Jersey15Charted-Regular";
+  src: url(../fonts/Jersey15Charted-Regular.ttf) format("truetype");
 }
 
-h4{
-    font-family: "Jersey 15 Charted", sans-serif;
-    font-size: 2.8vw;
-    color: rgb(27, 27, 27);
-    text-align: center;
+h4 {
+  font-family: "Jersey 15 Charted", sans-serif;
+  font-size: 2.8vw;
+  color: rgb(27, 27, 27);
+  text-align: center;
 }
 
-.contenedor{
-    background-color: rgb(104, 104, 104);
-    margin: 0px 0px 0px 0px;
-    display: grid;
-    gap: 0px;
-    grid-template:  "nav nav nav"
-                    "home home home"
-                    "instalaciones instalaciones instalaciones"
-                    "clases clases clases"
-                    "equipo equipo equipo"
-                    "contactenos contactenos contactenos"
-                    "footer footer footer";
+.contenedor {
+  background-color: rgb(104, 104, 104);
+  margin: 0px 0px 0px 0px;
+  display: grid;
+  gap: 0px;
+  grid-template:
+    "nav nav nav"
+    "home home home"
+    "instalaciones instalaciones instalaciones"
+    "clases clases clases"
+    "equipo equipo equipo"
+    "contactenos contactenos contactenos"
+    "footer footer footer";
 }
 
 .nav {
-    grid-area: nav;
-    position: sticky;
-    z-index: 10;
-    top: 0px;
-    font-family: "Jersey 15 Charted", sans-serif;
-    background-color: rgb(255, 255, 255, 0.4);
-    height: 30px;
-    box-sizing: border-box;
-    align-content: center;
-    align-items: center;
-    text-align: right;
+  grid-area: nav;
+  position: sticky;
+  z-index: 10;
+  top: 0px;
+  font-family: "Jersey 15 Charted", sans-serif;
+  font-size: 20px;
+  background-color: rgb(255, 255, 255, 0.4);
+  height: 40px;
+  box-sizing: border-box;
+  align-content: center;
+  align-items: center;
+  text-align: right;
 }
 
-.home{
-    grid-area: home;
-    height: 100vh;
-    width: 100%;
-    min-height: 600px;
-    margin: 0px;
-    padding: 0px;
+.home {
+  grid-area: home;
+  height: 100vh;
+  width: 100%;
+  min-height: 600px;
+  margin: 0px;
+  padding: 0px;
 }
 
-.homebackground{
-    background-image: url(../images/5008.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100vh;
-    min-height: 600px;
-    background-position: top -140px right;
-
+.homebackground {
+  background-image: url(../images/5008.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  background-position: top -140px right;
 }
 
 .hometext {
-    position: absolute;
-    top: 20%;
-    right: 40%;
-    text-align: left;
-    font-size: 3.8vw;
-    color: rgb(236, 236, 236);
-    transition-property: right;
-    transition-duration: 0.5s;
+  position: absolute;
+  top: 20%;
+  right: 40%;
+  text-align: left;
+  font-size: 3.8vw;
+  color: rgb(236, 236, 236);
+  transition-property: right;
+  transition-duration: 0.5s;
 }
 
-span{
-    color: yellow;
+span {
+  color: yellow;
 }
 
-.homebtn{
-    position: relative;
-    font-size: 2.8vw;
-    top: 0px;
-    right: 0px;
-    background-color: rgb(255, 255, 255, 0.1);
-    color: rgb(182, 182, 182);
-    border: 2px solid #e7e7e7;
-
+.homebtn {
+  position: relative;
+  font-size: 2.8vw;
+  top: 0px;
+  right: 0px;
+  background-color: rgb(255, 255, 255, 0.1);
+  color: rgb(182, 182, 182);
+  border: 2px solid #e7e7e7;
 }
 
 .homebtn:hover {
-    color: rgb(82, 82, 82);
-    background-color: yellow;
-    padding: 4px;
-    border-radius: 5px;
-    transition: 0.5s;
+  color: rgb(82, 82, 82);
+  background-color: yellow;
+  padding: 4px;
+  border-radius: 5px;
+  transition: 0.5s;
 }
 
-.instalaciones{
-    position: relative;
-    grid-area: instalaciones;
-    background-color: rgb(78, 78, 78);
-    color: darkgrey;
-
+.instalaciones {
+  position: relative;
+  grid-area: instalaciones;
+  background-color: rgb(78, 78, 78);
+  color: darkgrey;
 }
 
-.video{
-    display: flex;
-    justify-content: center;
+.video {
+  display: flex;
+  justify-content: center;
 }
 
-.insta_table{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+.insta_table {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.insta_list{
-    margin-top: 20px;
-    padding: 0px 40px 0px 40px;
-    list-style: none;
-    text-align: center;
+.insta_list {
+  margin-top: 20px;
+  padding: 0px 40px 0px 40px;
+  list-style: none;
+  text-align: center;
 }
 
-.icon-list{
-    max-width: 60px;
+.icon-list {
+  max-width: 60px;
 }
 
 .carousel {
-    position: relative;
-    width: 80%; 
-    margin: auto;
-    margin-bottom: 40px;
-  }
-  
-  .slides {
-    display: flex;
-  }
-  
-  .img-carousel {
-    object-fit: contain;
-    width: 100%;
-    height: 100%;
-    max-height: 100%;
-    display: none;
-    box-shadow: 0px 0px 40px #000000;
-    border-radius: 40px;
-    
-  }
-  
-  .prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: yellow;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .prev {
-    left: 0;
-  }
-  
-  .next {
-    right: 0;
-  }
-
-.clases{
-    grid-area: clases;
-    background-color: rgb(100, 41, 41);
-    width: 100%;
-    height: 100vh;
-    color: darkgrey;
-
+  position: relative;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 40px;
 }
 
-.equipo{
-    position: relative;
-    background-color: rgba(95, 95, 95, 0.5);
-    width: 100%;
-    height: 100vh;
-    grid-area: equipo;
-
+.slides {
+  display: flex;
 }
 
-.flip-cards {
-    background-color: transparent;
-    width: 300px;
-    height: 400px;
-    border: 1px solid yellow;
-    perspective: 1000px;
+.img-carousel {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  display: none;
+  box-shadow: 0px 0px 40px #000000;
+  border-radius: 40px;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: yellow;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.clases {
+  grid-area: clases;
+  background-color: rgb(100, 41, 41);
+  width: 100%;
+  height: 100vh;
+  color: darkgrey;
+}
+
+.equipo {
+  position: relative;
+  background-color: rgba(95, 95, 95, 0.5);
+  width: 100%;
+  grid-area: equipo;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.equipos {
+
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    
-  }
-  
+    justify-content:center;
+}
 
-  .flip-card1 {
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-  }
-  
-  .flip-cards:hover .flip-card1 {
-    transform: rotateY(180deg);
-  }
-  
-  .flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-  }
-  
-  .flip-card-front {
-    background-color: #bbb;
-    color: black;
-  }
-  
-  .flip-card-back {
-    background-color: rgba(255, 255, 0, 0.349);
-    color: rgb(26, 26, 26);
-    transform: rotateY(180deg);
-  }
-
-.contactenos{
-    text-align: center;
-    background-color: rgb(255, 255, 255, 0.5);
-    grid-area: contactenos;
+.cards {
+  background-color: transparent;
+  width: 220px;
+  height: 300px;
+  border: 1px solid yellow;
+  perspective: 1000px;
+  margin: auto;
+  position: relative;
 
 }
 
-.mapa{
-    box-shadow: 0px 0px 40px #000000;
-    border-radius: 40px;
-    width: 80%;
+.imgProfe{
+    width: 220px;
+    height: 300px;
 }
 
-form, option{
-    width: 80%;
-    padding: 0 10px 10px;
-    margin: auto;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    background-color: rgb(0, 0, 0);
-    background: linear-gradient(to bottom, #242424, transparent);
-    color: rgb(216, 216, 216);
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-align: center;
-    box-shadow: 0px 0px 40px #000000;
+.flip-card {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  
 }
 
-.footer{
-    background-color: rgba(43, 43, 43, 0.5);
-    grid-area: footer;
-
+.cards:hover .flip-card {
+  transform: rotateY(180deg);
 }
 
-.navbtn > a, .navbtn2 > a{
-    color: rgb(236, 236, 236);
-    text-decoration: none;
-    padding: 5px 10px 5px 10px;
-    display: inline-block;
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
-.navbtn>a:hover, .navbtn2>a:hover, .checkbtn:hover{
-    background-color: rgb(255, 255, 0, 0.6);
-    color: rgb(82, 82, 82);
-    padding: 1px 2px 1px 2px;
-    border-radius: 5px;
-    transition: 0.5s;
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: rgba(255, 255, 0, 0.349);
+  color: rgb(26, 26, 26);
+  transform: rotateY(180deg);
+}
+
+.contactenos {
+  text-align: center;
+  background-color: rgb(255, 255, 255, 0.5);
+  grid-area: contactenos;
+}
+
+.mapa {
+  box-shadow: 0px 0px 40px #000000;
+  border-radius: 40px;
+  width: 80%;
+}
+
+form,
+option {
+  width: 80%;
+  padding: 0 10px 10px;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  background-color: rgb(0, 0, 0);
+  background: linear-gradient(to bottom, #242424, transparent);
+  color: rgb(216, 216, 216);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+  box-shadow: 0px 0px 40px #000000;
+}
+
+.footer {
+  background-color: rgba(43, 43, 43, 0.5);
+  grid-area: footer;
+}
+
+.navbtn > a,
+.navbtn2 > a {
+  color: rgb(236, 236, 236);
+  text-decoration: none;
+  padding: 5px 10px 5px 10px;
+  display: inline-block;
+}
+
+.navbtn > a:hover,
+.navbtn2 > a:hover,
+.checkbtn:hover {
+  background-color: rgb(255, 255, 0, 0.6);
+  color: rgb(82, 82, 82);
+  padding: 1px 2px 1px 2px;
+  border-radius: 5px;
+  transition: 0.5s;
 }
 
 .menuhorizontal .navbtn {
-    display: inline-block;
-    list-style: none;
-    box-sizing: border-box;    
+  display: inline-block;
+  list-style: none;
+  box-sizing: border-box;
 }
 
-.checker{
-    display: none;
+.checker {
+  display: none;
 }
 
 .checkbtn {
-    display: none;
-    cursor: pointer;
-    position: absolute;
-    top: 0px;
-    right: 20px;
-    padding: 0px;
-    margin: 0px;
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  padding: 0px;
+  margin: 0px;
 }
 
-.menuvertical{
-    display: none;
-    position: absolute;
-    top: 18px;
-    right: 20px;
+.menuvertical {
+  display: none;
+  position: absolute;
+  top: 18px;
+  right: 20px;
 }
 
 .navbtn2 {
-    color: rgb(236, 236, 236);
-    list-style: none;
-    text-decoration: none;
-    text-align: center;
-    box-sizing: border-box;  
-    background-color: rgb(255, 255, 255, 0.4);
-    display: block;
+  color: rgb(236, 236, 236);
+  list-style: none;
+  text-decoration: none;
+  text-align: center;
+  box-sizing: border-box;
+  background-color: rgb(255, 255, 255, 0.4);
+  display: block;
 }
 
 @media screen and (max-width: 1200px) {
-    .home{
-        min-height: 500px;
-    }
-    .homebackground{
-        min-height: 800px;
-        background-position: top -100px right;
-    
-    }
-}
+  .home {
+    min-height: 500px;
+  }
+  .homebackground {
+    min-height: 800px;
+    background-position: top -100px right;
+  }
+  
+  .cards {
+    width: 180px;
+    height: 240px;
+  }
+  
+  .imgProfe{
+      width: 180px;
+      height: 240px;
+  }
+
+  }
 
 @media screen and (max-width: 600px) {
+  .menuhorizontal .navbtn {
+    display: none;
+  }
 
-    .menuhorizontal .navbtn{
-        display: none;
-    }
+  .checker {
+    display: none;
+    position: absolute;
+  }
 
-    .checker{
-        display: none;
-        position: absolute;
-        
-    }
+  .checkbtn {
+    position: absolute;
+    display: block;
+    text-align: center;
+  }
 
-    .checkbtn {
-        position: absolute;
-        display: block;
-        text-align: center;
-    }
-    
-    .checker:checked ~ .menuvertical {
-        display: block;
-    }
+  .checker:checked ~ .menuvertical {
+    display: block;
+  }
+
+  .cards {
+    width: 140px;
+    height: 200px;
+  }
+  
+  .imgProfe{
+      width: 140px;
+      height: 200px;
+  }
+
+
 
 }
