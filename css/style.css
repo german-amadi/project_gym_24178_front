@@ -12,6 +12,7 @@ h4 {
   font-size: 2.8vw;
   color: rgb(27, 27, 27);
   text-align: center;
+  filter: drop-shadow(4px 4px 4px rgba(221, 221, 221, 0.63));
 }
 
 .contenedor {
@@ -177,10 +178,9 @@ span {
 }
 
 .equipos {
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content:center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .cards {
@@ -191,12 +191,11 @@ span {
   perspective: 1000px;
   margin: auto;
   position: relative;
-
 }
 
-.imgProfe{
-    width: 220px;
-    height: 300px;
+.imgProfe {
+  width: 220px;
+  height: 300px;
 }
 
 .flip-card {
@@ -205,7 +204,6 @@ span {
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
-  
 }
 
 .cards:hover .flip-card {
@@ -233,17 +231,17 @@ span {
 }
 
 .clases {
-    grid-area: clases;
-    background-color: rgb(78, 78, 78);
-    width: 100%;
-    color: darkgrey;
-    text-align: center;
-    margin: auto;
+  grid-area: clases;
+  background-color: rgb(78, 78, 78);
+  width: 100%;
+  color: darkgrey;
+  text-align: center;
+  margin: auto;
 }
 
-.imghorarios{
-    width: 80%;
-    margin-bottom: 20px;
+.imghorarios {
+  width: 80%;
+  margin-bottom: 20px;
 }
 
 .contactenos {
@@ -266,16 +264,28 @@ option {
   margin-top: 40px;
   margin-bottom: 40px;
   background-color: rgb(0, 0, 0);
-  background: linear-gradient(to bottom, #242424, transparent);
-  color: rgb(216, 216, 216);
+  background: linear-gradient(to bottom, #818181, transparent);
+  color: rgb(0, 0, 0);
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   text-align: center;
   box-shadow: 0px 0px 40px #000000;
 }
 
+fieldset {
+  filter: drop-shadow(4px 4px 4px rgba(221, 221, 221, 0.63));
+}
 .footer {
   background-color: rgba(43, 43, 43, 0.5);
   grid-area: footer;
+  text-align: center;
+}
+
+.imgfooter {
+  width: 40px;
+  margin: auto;
+  margin-left: 30px;
+  display: inline-block;
+  filter: drop-shadow(4px 4px 4px rgba(221, 221, 221, 0.63));
 }
 
 .navbtn > a,
@@ -341,18 +351,17 @@ option {
     min-height: 800px;
     background-position: top -100px right;
   }
-  
+
   .cards {
     width: 180px;
     height: 240px;
   }
-  
-  .imgProfe{
-      width: 180px;
-      height: 240px;
-  }
 
+  .imgProfe {
+    width: 180px;
+    height: 240px;
   }
+}
 
 @media screen and (max-width: 600px) {
   .menuhorizontal .navbtn {
@@ -378,12 +387,9 @@ option {
     width: 140px;
     height: 200px;
   }
-  
-  .imgProfe{
-      width: 140px;
-      height: 200px;
+
+  .imgProfe {
+    width: 140px;
+    height: 200px;
   }
-
-
-
 }

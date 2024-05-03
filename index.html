@@ -22,24 +22,24 @@
       </label>
       <div class="menuvertical">
         <ul>
-          <li class="navbtn2"><a href="">Home</a></li>
-          <li class="navbtn2"><a href="">Instalaciones</a></li>
-          <li class="navbtn2"><a href="">Clases</a></li>
-          <li class="navbtn2"><a href="">Equipo</a></li>
-          <li class="navbtn2"><a href="">Contactanos</a></li>
+          <li class="navbtn2"><a href="#home">Home</a></li>
+          <li class="navbtn2"><a href="#insta">Instalaciones</a></li>
+          <li class="navbtn2"><a href="#equipo">Equipo</a></li>
+          <li class="navbtn2"><a href="#clases">Clases</a></li>
+          <li class="navbtn2"><a href="#contact">Contactanos</a></li>
         </ul>
       </div>
 
       <ul class="menuhorizontal">
-        <li class="navbtn"><a href="">Home</a></li>
-        <li class="navbtn"><a href="">Instalaciones</a></li>
-        <li class="navbtn"><a href="">Clases</a></li>
-        <li class="navbtn"><a href="">Equipo</a></li>
-        <li class="navbtn"><a href="">Contactanos</a></li>
+        <li class="navbtn"><a href="#home">Home</a></li>
+        <li class="navbtn"><a href="#insta">Instalaciones</a></li>
+        <li class="navbtn"><a href="#equipo">Equipo</a></li>
+        <li class="navbtn"><a href="#clases">Clases</a></li>
+        <li class="navbtn"><a href="#contact">Contactanos</a></li>
       </ul>
     </nav>
 
-    <section class="home">
+    <section class="home" id="home">
       <div class="homebackground"></div>
       <div class="hometext">
         <h3>
@@ -48,16 +48,17 @@
           Es tiempo de <span>Gimnasio</span>
         </h3>
 
-        <button class="homebtn">Sumate</button>
+        <a href="./pages/subscriptions.html">
+        <button class="homebtn">Sumate</button></a>
       </div>
     </section>
 
-    <section class="instalaciones">
+    <section class="instalaciones" >
 
       <div class="video">
         <video autoplay loop muted width="100%" src="./videos/4920813-hd_1920_1080_25fps.mp4" >Tu navegador no soporta el video</video>
       </div>
-      <h4>Nuestras Instalaciones</h4>
+      <h4 id="insta">Nuestras Instalaciones</h4>
       <div>
         <ul class="insta_table">
           <li class="insta_list">
@@ -105,7 +106,7 @@
       
     </section>
 
-    <section class="equipo">
+    <section class="equipo" id="equipo">
       <h4>Nuestro Equipo</h4>
       <div class="equipos">
       <!-- <div class="cards">
@@ -123,13 +124,13 @@
       </div>
       </section>
 
-      <section class="clases">
+      <section class="clases" id="clases">
         <h4>Horarios de Clases</h4>
         <img class="imghorarios" src="./images/Horarios.png" alt="">
       </section>
   
 
-      <section class="contactenos">
+      <section class="contactenos" id="contact">
         <h4>¿Dónde Estamos?</h4>
         <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0167117870783!2d-58.38551221747004!3d-34.60373891813143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e0!3m2!1ses!2sar!4v1714432503558!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         
@@ -167,7 +168,13 @@
       </section>
 
     <footer class="footer">
-      <h6>pie de pagina</h6>
+      <a href="mailto:info@gymcodoacodo.com">
+        <img class="imgfooter" src="./icons/bxl-gmail.png" alt=""></a>
+      <a href="https://www.instagram.com/programacodoacodo/?hl=es">
+        <img class="imgfooter" src="./icons/bxl-instagram-alt.png" alt=""></a>  
+      <a href="https://wa.me/+5491188888888">
+        <img class="imgfooter" src="./icons/bxl-whatsapp.png" alt=""></a>  
+
     </footer>
 
     <script src="./js/script.js"></script>

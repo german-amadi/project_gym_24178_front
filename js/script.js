@@ -1,12 +1,11 @@
-
 let dataProfe = [
   {
-      id: 1,
-      nombre: "Juan",
-      apellido: "Rodriguez",
-      titulo: "Entrenador Personal",
-      imagen: "./images/Trainer1.jpg",
-      descripcion: "afadfshfkjdbfk"
+    id: 1,
+    nombre: "Juan",
+    apellido: "Rodriguez",
+    titulo: "Entrenador Personal",
+    imagen: "./images/Trainer1.jpg",
+    descripcion: "afadfshfkjdbfk",
   },
   {
     id: 2,
@@ -14,45 +13,47 @@ let dataProfe = [
     apellido: "Legrand",
     titulo: "Entrenadora Personal",
     imagen: "./images/Trainer2.jpg",
-    descripcion: "afadfshfkjdbfk"
-},
-{
-  id: 3,
-  nombre: "Carla",
-  apellido: "Martinez",
-  titulo: "Profesora Ed. Física",
-  imagen: "./images/Trainer3.jpg",
-  descripcion: "afadfshfkjdbfk"
-},
-{
-  id: 4,
-  nombre: "Jorge",
-  apellido: "Maldonado",
-  titulo: "Profesor Ed. Física",
-  imagen: "./images/Trainer4.jpg",
-  descripcion: "afadfshfkjdbfk"
-},
-{
-  id: 5,
-  nombre: "Juana",
-  apellido: "Perez",
-  titulo: "Profesora Ed. Física",
-  imagen: "./images/Trainer5.jpg",
-  descripcion: "afadfshfkjdbfk"
-},
-{
-  id: 6,
-  nombre: "Anabela",
-  apellido: "Perez",
-  titulo: "Profesora Ed. Física",
-  imagen: "./images/Trainer6.jpg",
-  descripcion: "afadfshfkjdbfk"
-},
-]
+    descripcion: "afadfshfkjdbfk",
+  },
+  {
+    id: 3,
+    nombre: "Carla",
+    apellido: "Martinez",
+    titulo: "Profesora Ed. Física",
+    imagen: "./images/Trainer3.jpg",
+    descripcion: "afadfshfkjdbfk",
+  },
+  {
+    id: 4,
+    nombre: "Jorge",
+    apellido: "Maldonado",
+    titulo: "Profesor Ed. Física",
+    imagen: "./images/Trainer4.jpg",
+    descripcion: "afadfshfkjdbfk",
+  },
+  {
+    id: 5,
+    nombre: "Juana",
+    apellido: "Perez",
+    titulo: "Profesora Ed. Física",
+    imagen: "./images/Trainer5.jpg",
+    descripcion: "afadfshfkjdbfk",
+  },
+  {
+    id: 6,
+    nombre: "Anabela",
+    apellido: "Perez",
+    titulo: "Profesora Ed. Física",
+    imagen: "./images/Trainer6.jpg",
+    descripcion: "afadfshfkjdbfk",
+  },
+];
 
-cad = ``
+cad = ``;
 for (let profe of dataProfe) {
-    cad = cad + `
+  cad =
+    cad +
+    `
     <div class="cards">
     <div class="flip-card">
     <div class="flip-card-front">
@@ -65,10 +66,10 @@ for (let profe of dataProfe) {
     </div>
   </div>
   </div>
-  `
+  `;
 }
 
-document.querySelector(".equipos").innerHTML=cad
+document.querySelector(".equipos").innerHTML = cad;
 
 let slideIndex = 0;
 showSlides();
@@ -76,11 +77,13 @@ showSlides();
 function showSlides() {
   const slides = document.querySelector(".slides").children;
   for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
+    slides[i].style.display = "none";
   }
   slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  slides[slideIndex-1].style.display = "block";  
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+  slides[slideIndex - 1].style.display = "block";
 }
 
 setInterval(nextSlide, 4000);
