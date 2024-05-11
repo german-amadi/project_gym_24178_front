@@ -43,9 +43,248 @@
       </ul>
     </nav>
 
-    <section class="home" id="home">
+    <section class="home suscripcion" id="home">
       <div class="homebackground"></div>
-      <div class="hometext"></div>
+      <!-- <div class="hometext"></div> -->
+
+      <div class="suscripcion__cont">
+        <h2>Formulario de registro.</h2>
+
+        <form class="suscripcion__formulario" id="suscripcion__formulario" action="">
+
+        <div>
+
+          <p>Información Personal:</p>
+           
+          <div class="cont_div">
+          <div class="suscripcion__formulario-grupo" id="suscripcion__formulario-nombre">
+            <label for="nombre_suscripcion">Nombre</label>
+            <input type="text" id="nombre_suscripcion" 
+              name="nombre" placeholder=""
+              class="suscripcion__formulario-input">
+              <small class="suscripcion__formulario-mensajeError">Complete este campo</small>
+          </div>
+
+           <div class="suscripcion__formulario-grupo" id="suscripcion__formulario-apellido">
+            <label for="apellido_suscripcion">Apellido</label>
+              <input type="text" id="apellido_suscripcion" name="apellido"placeholder="" 
+              class="suscripcion__formulario-input">
+              <small class="suscripcion__formulario-mensajeError">Complete este campo</small>
+          </div>
+          </div>
+          
+          <div class="suscripcion__formulario-grupo" id="suscripcion__formulario-correo" >
+            <label for="correo_suscripcion">Correo electrónico</label>
+            <input type="email" id="correo_suscripcion" name="correo" placeholder=""
+            class="suscripcion__formulario-input">
+            <small class="suscripcion__formulario-mensajeError">Complete este campo</small>
+         </div>
+
+          <div class="suscripcion__formulario-grupo" id="suscripcion__formulario-telefono">
+            <label for="telefono_suscripcion">Número de teléfono</label>
+            <input type="tel" id="telefono_suscripcion" name="telefono" placeholder=""
+            class="suscripcion__formulario-input">
+            <small class="suscripcion__formulario-mensajeError">Complete este campo</small>
+          </div>
+
+          <div class="suscripcion__formulario-grupo" id="suscripcion__formulario-direccion">
+            <label for="direccion_suscripcion">Dirección</label>
+            <input type="text" id="direccion_suscripcion" name="direccion" placeholder=""
+            class="suscripcion__formulario-input">
+            <small class="suscripcion__formulario-mensajeError">Complete este campo</small>
+          </div>
+
+          <div class="cont_div">
+          <div class="suscripcion__formulario-grupo" id="suscripcion__formulario-fecha_nacimiento">
+            <label for="fecha_nacimiento_suscripcion">Fecha de nacimiento</label> 
+            <input type="date" id="fecha_nacimiento_suscripcion" name="fecha_nacimiento" placeholder=""
+            class="suscripcion__formulario-input">
+            <small class="suscripcion__formulario-mensajeError">Complete este campo</small>
+          </div>
+          
+          <div class="suscripcion__formulario-grupo" id="suscripcion__formulario-genero">
+            <label for="genero_susp">Género</label><br>
+            <select id="genero_susp" name="genero"
+            class="suscripcion__formulario-input-select">
+              <option disabled selected>Seleccione uno</option>
+              <option value="Hombre">Hombre</option>
+              <option value="Mujer">Mujer</option>
+              <option value="Otro">Otro</option>
+            </select>
+            <small class="suscripcion__formulario-mensajeError">Complete este campo</small>
+         </div>
+         </div>
+
+          <p>Contacto de Emergencia:</p>
+          <div class="cont_div">
+          <div class="suscripcion__formulario-grupo" id="suscripcion__formulario-nombre_emergencia">
+            <label for="nombre_emergencia">Nombre</label>
+            <input type="text" id="nombre_emergencia" 
+              name="nombre_emergencia" placeholder=""
+              class="suscripcion__formulario-input">
+            <small class="suscripcion__formulario-mensajeError">Complete este campo</small>
+          </div>
+
+           <div class="suscripcion__formulario-grupo" id="suscripcion__formulario-apellido_emergencia">
+            <label for="apellido_emergencia">Apellido</label>
+              <input type="text" id="apellido_emergencia" name="apellido_emergencia"placeholder="" 
+              class="suscripcion__formulario-input">
+            <small class="suscripcion__formulario-mensajeError">Complete este campo</small>
+          </div>
+          </div>
+
+          <div class="suscripcion__formulario-grupo" id="suscripcion__formulario-relacion">
+            <label for="relacion_emergencia">Relación con el cliente.</label>
+            <input type="text" id="relacion_emergencia" name="relacion" placeholder=""
+             class="suscripcion__formulario-input">
+            <small class="suscripcion__formulario-mensajeError">Complete este campo</small>
+         </div>
+
+          <div class="suscripcion__formulario-grupo" id="suscripcion__formulario-telefono_emergencia">
+            <label for="telefono_emergencia">Número de teléfono</label>
+            <input type="tel" id="telefono_emergencia" name="telefono_emergencia" placeholder=""
+             class="suscripcion__formulario-input">
+             <small class="suscripcion__formulario-mensajeError">Complete este campo</small>
+          </div>
+        </div>
+
+
+        <div>
+           <p>Información de Salud:</p>
+           
+           <div class="suscripcion__formulario-grupo" >
+             <label>¿Tiene alguna condición médica preexistente?</label>
+             <div>
+              <div>
+               <input type="radio" name="condicionMedica" id="condicion_medica_si" value="Si" onchange=toggleInput(this)
+               class="suscripcion__formulario-input-radio">
+               <label for="condicion_medica_si">Sí</label>
+               <input type="radio" name="condicionMedica" id="condicion_medica_no" value="No" onchange=toggleInput(this)
+               class="suscripcion__formulario-input-radio">
+               <label for="condicion_medica_no">No</label>
+             </div>
+             <div>
+               <input type="text" id="condicion_medica_descripcion" name="condicionMedicaDescripcion" placeholder="¿Cuál?"
+               class="suscripcion__formulario-input toggle-input" disabled>
+             </div>
+             </div>
+          </div>
+
+          <div class="suscripcion__formulario-grupo">
+             <label>¿Toma algún medicamento regularmente?</label>
+             <div>
+              <div>
+                <input type="radio" name="medicamento" id="medicamento_si" value="Si" onchange=toggleInput(this)
+                class="suscripcion__formulario-input-radio">
+             <label for="medicamento_si">Sí</label>
+             <input type="radio" name="medicamento" id="medicamento_no" value="No" onchange=toggleInput(this)
+             class="suscripcion__formulario-input-radio">
+             <label for="medicamento_no">No</label>
+              </div>
+              <div>
+                <input type="text" id="medicamento" name="condicionMedicaoDescripcion" placeholder="¿Cuál?"
+                class="suscripcion__formulario-input toggle-input" disabled>
+              </div>
+             </div>
+          </div>
+
+          <div class="suscripcion__formulario-grupo">
+             <label>¿Tiene alguna lesión actual o pasada?</label>
+             <div>
+              <div>
+                <input type="radio" name="lesion" id="lesion_si" value="Si" onchange=toggleInput(this)
+                class="suscripcion__formulario-input-radio">
+             <label for="lesion_si">Sí</label>
+             <input type="radio" name="lesion" id="lesion_no" value="No" onchange=toggleInput(this)
+             class="suscripcion__formulario-input-radio">
+             <label for="lesion_no">No</label>
+              </div>
+              <div>
+                <input type="text" id="lesion_descripcion" name="lesionDescripcion" placeholder="¿Cuál?"
+             class="suscripcion__formulario-input toggle-input" disabled>
+              </div>
+             </div>
+          </div>
+
+           <div class="suscripcion__formulario-grupo">
+             <label>¿Tiene alguna alergia?</label>
+             <div>
+              <div>
+                <input type="radio" name="alergia" id="alergia_si" value="Si" onchange=toggleInput(this)
+                class="suscripcion__formulario-input-radio">
+                <label for="alergia_si">Sí</label>
+                <input type="radio" name="alergia" id="alergia_no" value="No" onchange=toggleInput(this)
+                class="suscripcion__formulario-input-radio">
+                <label for="alergia_no">No</label>
+              </div>
+              <div>
+                <input type="text" id="alergia_descripcion" name="alergiaDescripcion" placeholder="¿Cuál?"
+                class="suscripcion__formulario-input toggle-input" disabled>
+              </div>
+             </div>
+          </div>
+
+
+          <p>Información de Estado Físico:</p>
+           
+          <div class="cont_div">
+          <div class="suscripcion__formulario-grupo" id="suscripcion__formulario-altura">
+            <label for="altura">Altura</label>
+            <input type="text" id="altura" name="altura" placeholder="cm"
+            class="suscripcion__formulario-input">
+            <small class="suscripcion__formulario-mensajeError">Complete este campo</small>
+          </div>
+
+          <div  class="suscripcion__formulario-grupo" id="suscripcion__formulario-peso">
+            <label for="peso">Peso</label>
+            <input type="text" id="peso" name="peso" placeholder="kg"
+            class="suscripcion__formulario-input">
+            <small class="suscripcion__formulario-mensajeError">Complete este campo</small>
+          </div>
+          </div>
+          
+          <div class="suscripcion__formulario-grupo">
+            <label for="actividad_fisica_pasado">¿Ha realizado actividad física en el pasado?</label>
+            <div>
+              <div>
+                <input type="radio" id="actividad_fisica_pasado_si" name="actividad_fisica" value="Si" onchange=toggleInput(this) class="suscripcion__formulario-input-radio">
+                <label for="actividad_fisica_pasado_si">Si</label>
+                <input type="radio" id="actividad_fisica_pasado_no" name="actividad_fisica" value="No" onchange=toggleInput(this) class="suscripcion__formulario-input-radio">
+                <label for="actividad_fisica_pasado_no">No</label>
+              </div>
+              <div>
+                <input type="text" id="alergia_descripcion" name="alergiaDescripcion" placeholder="¿Cuál?"
+                class="suscripcion__formulario-input toggle-input" disabled>
+              </div>
+            </div>
+
+            
+          </div>
+          
+           <p>Membresía</p>
+          <div class="suscripcion__formulario-grupo">
+            <label for="tipo_membresia">Tipo de membresía</label> <br>
+            <select id="tipo_membresia" name="tipo_membresia"
+            class="suscripcion__formulario-input-select">
+              <option disabled selected>Seleccione uno</option>
+              <option value="Mensual">Mensual</option>
+              <option value="Trimestral">Trimestral</option>
+              <option value="Anual">Anual</option>
+            </select>
+          </div>
+          
+        </div>
+
+         <div class="suscripcion__formulario-grupo suscripcion__formulario-btn">
+           <button type="submit" class="suscripcion__btn-enviar">Enviar</button>
+           <p class="suscripcion__completarTodo" id="suscripcion__completarTodo">Por favor complete todos los campos</p>
+           </div>
+        </form>
+      </div>
+
+      
     </section>
+
+    <script src="../js/formSuscripcion.js"></script>
   </body>
 </html>
