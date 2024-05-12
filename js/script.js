@@ -5,7 +5,7 @@ let dataProfe = [
     apellido: "Rodriguez",
     titulo: "Entrenador Personal",
     imagen: "./images/Trainer1.jpg",
-    descripcion: "afadfshfkjdbfk",
+    descripcion: '"Apasionado por el fitness, disfruto guiar a otros hacia una vida más sana, viendo su transformación como mi mayor motivación."',
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ let dataProfe = [
     apellido: "Legrand",
     titulo: "Entrenadora Personal",
     imagen: "./images/Trainer2.jpg",
-    descripcion: "afadfshfkjdbfk",
+    descripcion: '"Entrenador comprometido, me encanta ayudar a mis clientes a lograr sus metas, emocionándome con su progreso y fortaleza."',
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ let dataProfe = [
     apellido: "Martinez",
     titulo: "Profesora Ed. Física",
     imagen: "./images/Trainer3.jpg",
-    descripcion: "afadfshfkjdbfk",
+    descripcion: '"Amante del bienestar, personalizo soluciones para mejorar la vida de mis clientes, encontrando conexión en nuestras metas compartidas."',
   },
   {
     id: 4,
@@ -29,7 +29,7 @@ let dataProfe = [
     apellido: "Maldonado",
     titulo: "Profesor Ed. Física",
     imagen: "./images/Trainer4.jpg",
-    descripcion: "afadfshfkjdbfk",
+    descripcion: '"Obsesionado con el ejercicio, busco desafiar y motivar constantemente, orgulloso de ver su determinación y avances."',
   },
   {
     id: 5,
@@ -37,7 +37,7 @@ let dataProfe = [
     apellido: "Perez",
     titulo: "Profesora Ed. Física",
     imagen: "./images/Trainer5.jpg",
-    descripcion: "afadfshfkjdbfk",
+    descripcion: '"Transformar vidas es mi pasión como entrenador, emocionándome al verlos alcanzar un estilo de vida más saludable y activo."',
   },
   {
     id: 6,
@@ -45,7 +45,7 @@ let dataProfe = [
     apellido: "Perez",
     titulo: "Profesora Ed. Física",
     imagen: "./images/Trainer6.jpg",
-    descripcion: "afadfshfkjdbfk",
+    descripcion: '"Adicto al fitness, me apasiona ayudar a otros a descubrir su potencial, emocionándome con cada obstáculo superado y resultado logrado."',
   },
 ];
 
@@ -62,7 +62,7 @@ for (let profe of dataProfe) {
     <div class="flip-card-back">
       <h1>${profe.nombre} ${profe.apellido}</h1>
       <p>${profe.titulo}</p>
-      <p>${profe.descripcion}</p>
+      <p class="profe_desc" >${profe.descripcion}</p>
     </div>
   </div>
   </div>
