@@ -15,6 +15,7 @@
   </head>
 
   <body class="contenedor">
+    
     <nav class="nav">
       <input type="checkbox" name="" id="check" class="checker" />
       <label for="check" class="checkbtn">
@@ -129,42 +130,67 @@
         <img class="imghorarios" src="./images/Horarios.png" alt="">
       </section>
   
+<!-------------------- Seccion de contacto -------------------->
 
       <section class="contactenos" id="contact">
-        <h4>¿Dónde Estamos?</h4>
-        <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0167117870783!2d-58.38551221747004!3d-34.60373891813143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e0!3m2!1ses!2sar!4v1714432503558!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        
-        <form action="">
-          <fieldset><legend>Escribinos</legend>
-          <div class="input_form">
-              <label for="name">Nombre y apellido</label><br>    
-              <input type="text" name="" id="name" required placeholder="Escribe tu nombre" title="escribe tu nombre"> <!-- required bliga a cargar el campo / placeholder escribe por defecto en el campo y se borra cuando escribes-->
-          </div>
+        <h4>Contactanos</h4>
+
+        <div class="contactanos__cont">
+
           <div>    
-              <label for="mail">Correo Electronico</label><br>    
-              <input type="text" name="" id="mail" required placeholder="Escribe tu correo" title="escribe tu nombre">
+          <form action="" class="contacto__formulario" id="contacto__formulario">
+
+            <h3>¡Déjanos tu consulta!</h3>
+
+              <div class="contacto__formulario-grupo" id="contacto__formulario-nombre">
+                <input type="text" class="contacto_formulario-input" name="nombre" id="nombre_contacto" placeholder="Nombre y Apellido">
+                 <img class="contacto_formulario-iconoError" src="icons/icon-error.svg" alt="">
+                 <p class="contacto__formulario-mensajeError">Por favor complete este campo con su nombre y apellido</p>
           </div>
           
-          </fieldset>
-          <fieldset> <legend>¿Cómo supiste de nosotros?</legend>
-              <div class="input_form">
-                  <select name="options" id="options">
-                      <option value="opt1">Instagram</option>
-                      <option value="opt2">Google</option>
-                      <option value="opt3">Amigos</option>
-                      <option value="opt4">Otros</option>
-  
-                  </select>
+              <div class="contacto__formulario-grupo" id="contacto__formulario-correo">
+                <input type="email" class="contacto_formulario-input" name="correo" id="correo_contacto" placeholder="Correo electrónico">
+                 <img class="contacto_formulario-iconoError" src="icons/icon-error.svg" alt="">
+                 <p class="contacto__formulario-mensajeError">Por favor ingrese un email válido</p>
               </div>
-          </fieldset>
-          <fieldset><legend>Consultas</legend>
-              <div class="input_form">
-                  <textarea name="" id="" cols="30" rows="5"></textarea>
-              </div>
-              <button class="formbtn">Enviar</button>
-  
-          </fieldset>
 
+              <div class="contacto__formulario-grupo" id="contacto__formulario-telefono">
+                <input type="tel" class="contacto_formulario-input" name="telefono" id="correo_contacto" placeholder="Numero de telefono">
+                 <img class="contacto_formulario-iconoError" src="icons/icon-error.svg" alt="">
+                 <p class="contacto__formulario-mensajeError">Por favor ingrese un numero de telefono válido</p>
+              </div>
+
+              <div class="contacto__formulario-grupo">
+                <p>¿Cómo nos conociste?</p>
+                <input class="contacto__formulario-input-radio" type="radio" id="instagram_radio" name="conociste" value="Instagram">
+                <label for="instagram_radio">Instagram</label>
+                <input class="contacto__formulario-input-radio" type="radio" id="google_radio" name="conociste" value="Google">
+                <label for="google_radio">Google</label>
+                <input class="contacto__formulario-input-radio" type="radio" id="amigos_radio" name="conociste" value="Amigos">
+                <label for="amigos_radio">Amigos</label>
+                <input class="contacto__formulario-input-radio" type="radio" id="otros_radio" name="conociste" value="Otros">
+                <label for="otros_radio">Otros</label>
+                <p class="contacto__formulario-mensajeError">Por favor marca una opción</p>
+              </div>
+
+              <div class="contacto__formulario-grupo" id="contacto__formulario-consulta">
+                <textarea rows="4" class="contacto_formulario-input" name="consulta" id="consulta_contacto" placeholder="Escriba aquí su consulta"></textarea>
+                <p class="contacto__formulario-mensajeError">Por favor complete este campo con su consulta</p>
+              </div>
+              
+
+              <div class="contacto__formulario-grupo contacto__formulario-btn">
+                <button type="submit" class="contacto__btn-enviar">Enviar</button>
+                <p class="contacto__completarTodo" id="contacto__completarTodo">Por favor complete todos los campos</p>
+              </div>
+            </form>
+        </div>
+
+        <div>
+          <h3>¿Donde estamos?</h3>
+          <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0167117870783!2d-58.38551221747004!3d-34.60373891813143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e0!3m2!1ses!2sar!4v1714432503558!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        </div>
       </section>
 
     <footer class="footer">
@@ -179,6 +205,8 @@
     </footer>
 
     <script src="./js/script.js"></script>
+    <script src="./js/formContacto.js"></script>
+
     
   </body>
 </html>

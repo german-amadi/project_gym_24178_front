@@ -7,12 +7,34 @@
   src: url(../fonts/Jersey15Charted-Regular.ttf) format("truetype");
 }
 
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --fuente:'Poppins', sans-serif ;
+    
+  --Red: hsl(0, 100%, 74%) ;
+  --Green: hsl(154, 59%, 51%);
+
+
+  --Blue: hsl(248, 32%, 49%);
+
+
+  --DarkBlue: hsl(249, 10%, 26%) ;
+  --GrayishBlue: hsl(246, 25%, 77%);
+
+}
+
 h4 {
   font-family: "Jersey 15 Charted", sans-serif;
   font-size: 2.8vw;
   color: rgb(27, 27, 27);
   text-align: center;
   filter: drop-shadow(4px 4px 4px rgba(221, 221, 221, 0.63));
+  margin: 50px 0;
 }
 
 .contenedor {
@@ -122,7 +144,7 @@ h4 {
   transition-duration: 0.5s;
 }
 
-span {
+.hometext span {
   color: yellow;
 }
 
@@ -145,10 +167,11 @@ span {
 }
 
 .instalaciones {
-  position: relative;
+  /* position: relative; */
   grid-area: instalaciones;
   background-color: rgb(78, 78, 78);
   color: darkgrey;
+  /* background-color: #fff; */
 }
 
 .video {
@@ -296,36 +319,145 @@ span {
   margin-bottom: 20px;
 }
 
+
+
+/* ------------------------ seccion cantacto ------------------------ */
+
 .contactenos {
-  text-align: center;
-  background-color: rgb(255, 255, 255, 0.5);
   grid-area: contactenos;
+  padding-bottom: 50px;
+  /* background-color: rgb(255, 255, 255, 0.5); */
 }
+
+.contactanos__cont{
+  display: flex;
+}
+.contactanos__cont > div{
+  width: 50%;
+}
+/* .contactanos__cont > div:first-child{
+  
+} */
+
+/*-------- formulaio contacto --------*/
+
+.contacto__formulario{
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
+    margin: 10px auto;
+    width: 90%;
+    max-width: 400px;
+}
+
+.contacto__formulario h3{
+  margin-bottom: 20px;
+}
+.contacto__formulario-grupo{
+    position: relative;
+    margin-bottom: 15px;
+}
+.contacto__formulario-grupo p{
+  margin-bottom: 10px;
+}
+
+.contacto__formulario-grupo textarea{
+  resize: none;
+}
+
+.contacto__formulario-input-radio{
+}
+
+
+.contacto_formulario-input{
+    width: 100%;
+    padding: 15px 25px;
+    border-radius: 5px;
+    margin-bottom: 5px ;
+    border: 1px solid var(--GrayishBlue);
+    font-weight: 600;
+}
+.contacto_formulario-input:focus{
+   outline: none;
+   border: 2px solid var(--DarkBlue);
+   color: var(--DarkBlue);
+   
+}
+
+.contacto_formulario-iconoError{
+    position: absolute;
+    top: 13px;
+    right: 25px;
+    opacity: 0;
+}
+.contacto__formulario-mensajeError{
+    margin: 0 0 20px 0;
+    text-align: end;
+    font-size: 0.8em;
+    color: var(--Red);
+    display: none;
+}
+
+.contacto__btn-enviar{
+    width: 100%;
+    padding: 15px 0;
+    background-color: var(--Green);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 5px;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.5s ease-out;
+}
+.contacto__btn-enviar:hover{
+    background-color: hsl(154, 65%, 68%);
+
+}
+
+/* validaciones */
+
+.activo .contacto_formulario-iconoError{
+    opacity: 1;
+}
+.activo .contacto__formulario-mensajeError{
+    display: block;
+}
+.activo .contacto_formulario-input{
+    border: 2px solid var(--Red);
+}
+
+.contacto__completarTodo{
+    color: var(--Red);
+    display: none;
+}
+.contacto__completarTodo-activo{
+    display: block;
+}
+
+.contactanos__cont > div:last-child{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.contactanos__cont > div:last-child h3{
+  font-size: 2em;
+}
+
 
 .mapa {
   box-shadow: 0px 0px 40px #000000;
   border-radius: 40px;
-  width: 80%;
+  width: 70%;
 }
 
-form,
-option {
-  width: 80%;
-  padding: 0 10px 10px;
-  margin: auto;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  background-color: rgb(0, 0, 0);
-  background: linear-gradient(to bottom, #818181, transparent);
-  color: rgb(0, 0, 0);
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  text-align: center;
-  box-shadow: 0px 0px 40px #000000;
-}
 
-fieldset {
-  filter: drop-shadow(4px 4px 4px rgba(221, 221, 221, 0.63));
-}
+/* ------------------------ seccion footer ------------------------ */
 .footer {
   background-color: rgba(43, 43, 43, 0.5);
   grid-area: footer;
@@ -395,6 +527,157 @@ fieldset {
   display: block;
 }
 
+<<<<<<< HEAD
+=======
+/* ------------------------ seccion suscripcion ------------------------ */
+
+.suscripcion{
+  /* position: relative; */
+  display: flex;
+  justify-content: center;
+  /* flex-direction: column; */
+  align-items: center;
+}
+
+.suscripcion__cont{
+  position: absolute;
+  background-color: rgba(119, 119, 131, .8);
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
+  width: 70%;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.suscripcion__cont > h2{
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+}
+.suscripcion__cont div div{
+ 
+}
+.suscripcion__cont p{
+  color: bisque;
+  margin: 10px 0;
+  font-size: 1.1em;
+  
+}
+
+.suscripcion__formulario{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+}
+
+.suscripcion__formulario > div{
+
+  display: grid;
+  
+}
+
+.suscripcion__formulario-grupo{
+  padding: 0px 0;
+}
+.suscripcion__formulario-grupo label:first-child{
+
+  /* color: red; */
+  font-size: 0.9rem;
+  
+}
+.suscripcion__formulario-grupo > input{
+  margin-top: 5px;
+}
+.suscripcion__formulario-grupo div{
+  display: flex;
+  align-items: center;
+}
+.suscripcion__formulario-grupo div div:first-child{
+  width: 20%;
+  justify-content: space-around;
+  margin-right: 10px;
+}
+.suscripcion__formulario-grupo div div:last-child{
+  width: 80%;
+}
+
+.cont_div{
+  display: flex;
+  justify-content: space-between;
+}
+.cont_div div{
+  width: 45%;
+}
+
+.suscripcion__formulario-input,
+.suscripcion__formulario-input-select{
+    width: 100%;
+    padding: 2px 15px;
+    border-radius: 5px;
+    border: 2px solid var(--GrayishBlue);
+    font-weight: 600;
+    margin-top: 4px;
+}
+.suscripcion__formulario-input:focus{
+   outline: none;
+   border: 2px solid var(--DarkBlue);
+   color: var(--DarkBlue);
+   
+}
+
+.suscripcion__formulario-mensajeError{
+    margin: 0 0 20px 0;
+    text-align: end;
+    font-size: 0.8em;
+    color: var(--Red);
+    display: none;
+}
+
+.suscripcion__formulario-btn{
+  grid-column: 1 / -1; 
+  display: flex;
+  justify-content: center; 
+
+}
+
+.suscripcion__btn-enviar{
+    width: 300px;
+    padding: 5px 0;
+    background-color: var(--Green);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 5px;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.5s ease-out;
+}
+.suscripcion__btn-enviar:hover{
+    background-color: hsl(154, 65%, 68%);
+
+}
+
+/* validaciones */
+
+.activo .suscripcion__formulario-mensajeError{
+    display: block;
+}
+.activo .suscripcion__formulario-input{
+    border: 2px solid var(--Red);
+}
+
+.suscripcion__completarTodo{
+    color: var(--Red);
+    display: none;
+}
+.suscripcion__completarTodo-activo{
+    display: block;
+}
+
+
+>>>>>>> 613ad9506e8dfaad68cca73c8d2ce449385b6f2d
 
 @media screen and (max-width: 1200px) {
   .home {
@@ -446,7 +729,17 @@ fieldset {
     height: 200px;
   }
 
+<<<<<<< HEAD
   .profe_desc{
     font-size: 0.5%;
   }
+=======
+  /* seccion contacto */
+  .contactanos__cont{
+    flex-direction:column-reverse;
+  }
+  .contactanos__cont > div{
+  width: 100%;
+}
+>>>>>>> 613ad9506e8dfaad68cca73c8d2ce449385b6f2d
 }
