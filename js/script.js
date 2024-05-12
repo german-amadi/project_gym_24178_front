@@ -62,7 +62,7 @@ for (let profe of dataProfe) {
     <div class="flip-card-back">
       <h1>${profe.nombre} ${profe.apellido}</h1>
       <p>${profe.titulo}</p>
-      <p class="profe_desc" >${profe.descripcion}</p>
+      <p class="profe_desc">${profe.descripcion}</p>
     </div>
   </div>
   </div>
