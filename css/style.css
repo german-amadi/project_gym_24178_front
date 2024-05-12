@@ -269,6 +269,7 @@ h4 {
 }
 
 .profe_desc{
+  padding: 10px;
   font-style: italic;
 }
 
@@ -527,8 +528,6 @@ h4 {
   display: block;
 }
 
-<<<<<<< HEAD
-=======
 /* ------------------------ seccion suscripcion ------------------------ */
 
 .suscripcion{
@@ -677,7 +676,6 @@ h4 {
 }
 
 
->>>>>>> 613ad9506e8dfaad68cca73c8d2ce449385b6f2d
 
 @media screen and (max-width: 1200px) {
   .home {
@@ -733,7 +731,7 @@ h4 {
   .profe_desc{
     font-size: 0.5%;
   }
-=======
+
   /* seccion contacto */
   .contactanos__cont{
     flex-direction:column-reverse;
@@ -741,5 +739,4 @@ h4 {
   .contactanos__cont > div{
   width: 100%;
 }
->>>>>>> 613ad9506e8dfaad68cca73c8d2ce449385b6f2d
 }
