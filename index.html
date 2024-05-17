@@ -15,7 +15,6 @@
   </head>
 
   <body class="contenedor">
-    
     <nav class="nav">
       <input type="checkbox" name="" id="check" class="checker" />
       <label for="check" class="checkbtn">
@@ -40,6 +39,10 @@
       </ul>
     </nav>
 
+<!-- ------------------------------------------------------- -->
+<!-------------------- SECCION HOME --------------------------->
+<!-- ------------------------------------------------------- -->
+
     <section class="home" id="home">
       <div class="homebackground"></div>
       <div class="hometext">
@@ -53,6 +56,10 @@
         <button class="homebtn">Sumate</button></a>
       </div>
     </section>
+
+<!-- ------------------------------------------------------- -->
+<!-------------------- SECCION INSTALACIONES ------------------>
+<!-- ------------------------------------------------------- -->
 
     <section class="instalaciones" >
 
@@ -107,6 +114,10 @@
       
     </section>
 
+<!-- ------------------------------------------------------- -->
+<!-------------------- SECCION EQUIPO ------------------------->
+<!-- ------------------------------------------------------- -->
+
     <section class="equipo" id="equipo">
       <h4>Nuestro Equipo</h4>
       <div class="equipos">
@@ -129,8 +140,10 @@
         <h4>Horarios de Clases</h4>
         <img class="imghorarios" src="./images/Horarios.png" alt="">
       </section>
-  
-<!-------------------- Seccion de contacto -------------------->
+
+<!-- ------------------------------------------------------- -->
+<!-------------------- SECCION CONTACTO ----------------------->
+<!-- ------------------------------------------------------- -->
 
       <section class="contactenos" id="contact">
         <h4>Contactanos</h4>
@@ -160,7 +173,7 @@
                  <p class="contacto__formulario-mensajeError">Por favor ingrese un numero de telefono válido</p>
               </div>
 
-              <div class="contacto__formulario-grupo">
+              <div class="contacto__formulario-grupo" id="contacto__formulario-conociste">
                 <p>¿Cómo nos conociste?</p>
                 <input class="contacto__formulario-input-radio" type="radio" id="instagram_radio" name="conociste" value="Instagram">
                 <label for="instagram_radio">Instagram</label>
@@ -205,8 +218,6 @@
     </footer>
     
     <script src="./js/script.js"></script>
-    <script src="./js/formContacto.js"></script>
-
-    
+    <script type="module" src="./js/formContacto.js"></script>
   </body>
 </html>

@@ -1,76 +1,65 @@
+import { validarCampoInput, expresiones, validarCamposRadio} from "./utils.js";
+
 const formularioContacto = document.getElementById("contacto__formulario");
 const inputsContacto = document.querySelectorAll(".contacto_formulario-input");
- const radiosContacto = document.querySelectorAll(
-   ".contacto__formulario-input-radio"
-);
  
- const expresiones = {
-   nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-   apellido: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
-   correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-   telefono: /^\d{7,14}$/, // 7 a 14 numeros.
-   consulta: /^[a-zA-ZÀ-ÿ\s]{5,40}$/,
-};
- 
-
 const camposContacto = {
   nombre: false,
   apellido: false,
   correo: false,
   telefono: false,
-  conociste: false,
   consulta: false,
 };
+
+const camposRadio = ["conociste"];
   
 const validarFormularioContacto = (e) => {
   switch (e.target.name) {
     case "nombre":
-      validarCampo("contacto", expresiones.nombre, e.target, "nombre");
+      validarCampoInput(
+        "contacto",
+        expresiones.nombre,
+        e.target,
+        "nombre",
+        camposContacto
+      );
       break;
     case "apellido":
-      validarCampo("contacto", expresiones.apellido, e.target, "apellido");
+      validarCampoInput(
+        "contacto",
+        expresiones.apellido,
+        e.target,
+        "apellido",
+        camposContacto
+      );
       break;
     case "correo":
-      validarCampo("contacto", expresiones.correo, e.target, "correo");
+      validarCampoInput(
+        "contacto",
+        expresiones.correo,
+        e.target,
+        "correo",
+        camposContacto
+      );
       break;
     case "telefono":
-      validarCampo("contacto", expresiones.telefono, e.target, "telefono");
-      break;
-    case "conociste":
-      validarRadio(e.target, "conociste");
+      validarCampoInput(
+        "contacto",
+        expresiones.telefono,
+        e.target,
+        "telefono",
+        camposContacto
+      );
       break;
     case "consulta":
-      validarCampo("contacto", expresiones.consulta, e.target, "consulta");
+      validarCampoInput(
+        "contacto",
+        expresiones.consulta,
+        e.target,
+        "consulta",
+        camposContacto
+      );
       break;
-  }
-};
-
-const validarCampo = (form, expresion, input, campo) => {
-  if (expresion.test(input.value)) {
-    document
-      .getElementById(`${form}__formulario-${campo}`)
-      .classList.add("activo");
-    document
-      .getElementById(`${form}__formulario-${campo}`)
-      .classList.remove("activo");
-    form === "contacto"
-      ? (camposContacto[campo] = true)
-      : (camposSuscripcion[campo] = true);
-  } else {
-    document
-      .getElementById(`${form}__formulario-${campo}`)
-      .classList.add("activo");
-    form === "contacto"
-      ? (camposContacto[campo] = false)
-      : (camposSuscripcion[campo] = false);
-  }
-};
-
-const validarRadio = (input, campo) => {
-  if (input.checked) {
-    (camposContacto[campo] = true)
-  } else {
-    (camposContacto[campo] = false)
   }
 };
 
@@ -79,20 +68,17 @@ inputsContacto.forEach((input) => {
   input.addEventListener("blur", validarFormularioContacto);
 });
 
-radiosContacto.forEach((radio) => {
-  radio.addEventListener("change", validarFormularioContacto);
-});
-
 formularioContacto.addEventListener("submit", (e) => {
   e.preventDefault();
-  console.log("ando");
+   let radiosValidados = validarCamposRadio("contacto", camposRadio);
+
 
   if (
     camposContacto.nombre &&
     camposContacto.telefono &&
     camposContacto.correo &&
-    camposContacto.conociste &&
-    camposContacto.consulta
+    camposContacto.consulta &&
+    radiosValidados
   ) {
     formularioContacto.reset();
   } else {

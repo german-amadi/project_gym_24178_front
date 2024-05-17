@@ -268,8 +268,9 @@ h4 {
 }
 
 
-
-/* ------------------------ seccion cantacto ------------------------ */
+/* ------------------------------------------------------------------ */
+/* ------------------------ SECCION CONTACTO ------------------------ */
+/* ------------------------------------------------------------------ */
 
 .contactenos {
   grid-area: contactenos;
@@ -283,15 +284,12 @@ h4 {
 .contactanos__cont > div{
   width: 50%;
 }
-/* .contactanos__cont > div:first-child{
-  
-} */
 
 /*-------- formulaio contacto --------*/
 
 .contacto__formulario{
     background-color: #fff;
-    padding: 30px;
+    padding: 25px;
     border-radius: 5px;
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
     margin: 10px auto;
@@ -304,7 +302,7 @@ h4 {
 }
 .contacto__formulario-grupo{
     position: relative;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 .contacto__formulario-grupo p{
   margin-bottom: 10px;
@@ -314,13 +312,9 @@ h4 {
   resize: none;
 }
 
-.contacto__formulario-input-radio{
-}
-
-
 .contacto_formulario-input{
     width: 100%;
-    padding: 15px 25px;
+    padding: 12px 20px;
     border-radius: 5px;
     margin-bottom: 5px ;
     border: 1px solid var(--GrayishBlue);
@@ -332,16 +326,14 @@ h4 {
    color: var(--DarkBlue);
    
 }
-
 .contacto_formulario-iconoError{
     position: absolute;
-    top: 13px;
-    right: 25px;
+    top: 10px;
+    right: 10px;
     opacity: 0;
 }
 .contacto__formulario-mensajeError{
-    margin: 0 0 20px 0;
-    text-align: end;
+    text-align: start;
     font-size: 0.8em;
     color: var(--Red);
     display: none;
@@ -371,6 +363,9 @@ h4 {
 .activo .contacto_formulario-iconoError{
     opacity: 1;
 }
+/* .contacto__formulario-mensajeError{
+    display: block;
+} */
 .activo .contacto__formulario-mensajeError{
     display: block;
 }
@@ -405,7 +400,9 @@ h4 {
 }
 
 
-/* ------------------------ seccion footer ------------------------ */
+/* ------------------------------------------------------------------ */
+/* ------------------------ SECCION FOOTER ---------------------------*/
+/* ------------------------------------------------------------------ */
 .footer {
   background-color: rgba(43, 43, 43, 0.5);
   grid-area: footer;
@@ -475,23 +472,24 @@ h4 {
   display: block;
 }
 
-/* ------------------------ seccion suscripcion ------------------------ */
+/* ------------------------------------------------------------------ */
+/* ------------------------ SECCION SUSCRIPCION ------------------------ */
+/* ------------------------------------------------------------------ */
 
 .suscripcion{
-  /* position: relative; */
   display: flex;
   justify-content: center;
-  /* flex-direction: column; */
   align-items: center;
+  background-color: aqua;
 }
 
 .suscripcion__cont{
-  position: absolute;
   background-color: rgba(119, 119, 131, .8);
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
   width: 70%;
-  padding: 30px;
+  padding: 20px;
   border-radius: 20px;
+  position: absolute;
 }
 
 .suscripcion__cont > h2{
@@ -513,23 +511,18 @@ h4 {
 .suscripcion__formulario{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 30px;
+  grid-gap: 20px;
 }
 
 .suscripcion__formulario > div{
-
   display: grid;
-  
 }
 
 .suscripcion__formulario-grupo{
   padding: 0px 0;
 }
 .suscripcion__formulario-grupo label:first-child{
-
-  /* color: red; */
   font-size: 0.9rem;
-  
 }
 .suscripcion__formulario-grupo > input{
   margin-top: 5px;
@@ -573,7 +566,7 @@ h4 {
 
 .suscripcion__formulario-mensajeError{
     margin: 0 0 20px 0;
-    text-align: end;
+    text-align: start;
     font-size: 0.8em;
     color: var(--Red);
     display: none;
@@ -602,24 +595,25 @@ h4 {
 }
 .suscripcion__btn-enviar:hover{
     background-color: hsl(154, 65%, 68%);
-
 }
 
 /* validaciones */
 
 .activo .suscripcion__formulario-mensajeError{
     display: block;
-}
-.activo .suscripcion__formulario-input{
-    border: 2px solid var(--Red);
+    margin: 0;
 }
 
 .suscripcion__completarTodo{
     color: var(--Red);
     display: none;
+    text-align: center;
+    font-size: 1.1em;
+    margin-top: 5px;
 }
 .suscripcion__completarTodo-activo{
     display: block;
+    
 }
 
 

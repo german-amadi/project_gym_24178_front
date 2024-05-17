@@ -152,7 +152,7 @@
         <div>
            <p>Información de Salud:</p>
            
-           <div class="suscripcion__formulario-grupo" >
+           <div class="suscripcion__formulario-grupo" id="suscripcion__formulario-condicionMedica">
              <label>¿Tiene alguna condición médica preexistente?</label>
              <div>
               <div>
@@ -168,9 +168,10 @@
                class="suscripcion__formulario-input toggle-input" disabled>
              </div>
              </div>
+             <small class="suscripcion__formulario-mensajeError">Complete este campo</small>
           </div>
 
-          <div class="suscripcion__formulario-grupo">
+          <div class="suscripcion__formulario-grupo" id="suscripcion__formulario-medicamento">
              <label>¿Toma algún medicamento regularmente?</label>
              <div>
               <div>
@@ -186,9 +187,10 @@
                 class="suscripcion__formulario-input toggle-input" disabled>
               </div>
              </div>
+             <small class="suscripcion__formulario-mensajeError">Complete este campo</small>
           </div>
 
-          <div class="suscripcion__formulario-grupo">
+          <div class="suscripcion__formulario-grupo" id="suscripcion__formulario-lesion">
              <label>¿Tiene alguna lesión actual o pasada?</label>
              <div>
               <div>
@@ -204,9 +206,10 @@
              class="suscripcion__formulario-input toggle-input" disabled>
               </div>
              </div>
+             <small class="suscripcion__formulario-mensajeError">Complete este campo</small>
           </div>
 
-           <div class="suscripcion__formulario-grupo">
+           <div class="suscripcion__formulario-grupo" id="suscripcion__formulario-alergia">
              <label>¿Tiene alguna alergia?</label>
              <div>
               <div>
@@ -222,6 +225,7 @@
                 class="suscripcion__formulario-input toggle-input" disabled>
               </div>
              </div>
+             <small class="suscripcion__formulario-mensajeError">Complete este campo</small>
           </div>
 
 
@@ -243,7 +247,7 @@
           </div>
           </div>
           
-          <div class="suscripcion__formulario-grupo">
+          <div class="suscripcion__formulario-grupo" id="suscripcion__formulario-actividad_fisica">
             <label for="actividad_fisica_pasado">¿Ha realizado actividad física en el pasado?</label>
             <div>
               <div>
@@ -257,8 +261,7 @@
                 class="suscripcion__formulario-input toggle-input" disabled>
               </div>
             </div>
-
-            
+            <small class="suscripcion__formulario-mensajeError">Complete este campo</small>
           </div>
           
            <p>Membresía</p>
@@ -271,13 +274,14 @@
               <option value="Trimestral">Trimestral</option>
               <option value="Anual">Anual</option>
             </select>
+            <small class="suscripcion__formulario-mensajeError">Complete este campo</small>
           </div>
           
         </div>
 
          <div class="suscripcion__formulario-grupo suscripcion__formulario-btn">
            <button type="submit" class="suscripcion__btn-enviar">Enviar</button>
-           <p class="suscripcion__completarTodo" id="suscripcion__completarTodo">Por favor complete todos los campos</p>
+           <small class="suscripcion__completarTodo" id="suscripcion__completarTodo">Por favor complete todos los campos</small>
            </div>
         </form>
       </div>
@@ -286,6 +290,7 @@
     </section>
 
 
-    <script src="../js/formSuscripcion.js"></script>
+    <script type="module" src="../js/formSuscripcion.js"></script>
+    <!-- <script type="module" src="../js/utils.js"></script> -->
   </body>
 </html>
