@@ -7,29 +7,33 @@
   src: url(../fonts/Jersey15Charted-Regular.ttf) format("truetype");
 }
 
+/* reset propiedades */
 *{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+/* variables */
 :root{
-  --fuente:'Poppins', sans-serif ;
+  --fuente1:'Poppins', sans-serif ;
+  --fuente2: "Jersey 15 Charted", sans-serif;
+
+  --color1: rgb(104, 104, 104);
+  --color2: rgb(236, 236, 236);
+  --color3: rgb(182, 182, 182);
+  --color4: rgb(82, 82, 82);
+  --color5: rgb(78, 78, 78);
     
   --Red: hsl(0, 100%, 74%) ;
   --Green: hsl(154, 59%, 51%);
-
-
-  --Blue: hsl(248, 32%, 49%);
-
-
   --DarkBlue: hsl(249, 10%, 26%) ;
   --GrayishBlue: hsl(246, 25%, 77%);
 
 }
 
-h4 {
-  font-family: "Jersey 15 Charted", sans-serif;
+.section__titulo {
+  font-family: var(--fuente2);
   font-size: 2.8vw;
   color: rgb(27, 27, 27);
   text-align: center;
@@ -38,26 +42,30 @@ h4 {
 }
 
 .contenedor {
-  background-color: rgb(104, 104, 104);
-  margin: 0px 0px 0px 0px;
+  background-color: var(--color1);
   display: grid;
   gap: 0px;
   grid-template:
-    "nav nav nav"
+    "header header header"
     "home home home"
     "instalaciones instalaciones instalaciones"
     "equipo equipo equipo"
     "clases clases clases"
     "contactenos contactenos contactenos"
     "footer footer footer";
+  font-size: 16px;
 }
 
-.nav {
-  grid-area: nav;
+
+/* ------------------------------------------------------------------ */
+/* ------------------------ HEADER ---------------------------------- */
+/* ------------------------------------------------------------------ */
+.header {
+  grid-area: header;
   position: sticky;
   z-index: 10;
   top: 0px;
-  font-family: "Jersey 15 Charted", sans-serif;
+  font-family: var(--fuente2);
   font-size: 20px;
   background-color: rgb(255, 255, 255, 0.4);
   height: 40px;
@@ -67,6 +75,70 @@ h4 {
   text-align: right;
 }
 
+.nav {
+  height: 100%;
+}
+
+/*--------------- NavBar ---------------*/
+.navbtn > a,
+.navbtn2 > a {
+  color: rgb(236, 236, 236);
+  text-decoration: none;
+  padding: 5px 10px 5px 10px;
+  display: inline-block;
+}
+
+.navbtn > a:hover,
+.navbtn2 > a:hover,
+.checkbtn:hover {
+  background-color: rgb(255, 255, 0, 0.6);
+  color: rgb(82, 82, 82);
+  padding: 1px 2px 1px 2px;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+.menuhorizontal .navbtn {
+  display: inline-block;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+.checker {
+  display: none;
+}
+
+.checkbtn {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.menuvertical {
+  display: none;
+  position: absolute;
+  top: 18px;
+  right: 20px;
+}
+
+.navbtn2 {
+  color: rgb(236, 236, 236);
+  list-style: none;
+  text-decoration: none;
+  text-align: center;
+  box-sizing: border-box;
+  background-color: rgb(255, 255, 255, 0.4);
+  display: block;
+}
+
+
+/* ------------------------------------------------------------------ */
+/* ------------------------ SECCION HOME ---------------------------- */
+/* ------------------------------------------------------------------ */
 .home {
   grid-area: home;
   height: 100vh;
@@ -81,9 +153,9 @@ h4 {
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  height: 100vh;
   min-height: 600px;
   background-position: top -140px right;
+  height: 115%;
 }
 
 .hometext {
@@ -92,7 +164,7 @@ h4 {
   right: 40%;
   text-align: left;
   font-size: 3.8vw;
-  color: rgb(236, 236, 236);
+  color: var(--color2);
   transition-property: right;
   transition-duration: 0.5s;
 }
@@ -102,29 +174,33 @@ h4 {
 }
 
 .homebtn {
-  position: relative;
   font-size: 2.8vw;
   top: 0px;
   right: 0px;
   background-color: rgb(255, 255, 255, 0.1);
-  color: rgb(182, 182, 182);
+  color: var(--color3);
   border: 2px solid #e7e7e7;
 }
 
 .homebtn:hover {
-  color: rgb(82, 82, 82);
+  color: var(--color4);
   background-color: yellow;
   padding: 4px;
   border-radius: 5px;
   transition: 0.5s;
 }
 
+/* ------------------------------------------------------------------ */
+/* ------------------------ SECCION INSTALACIONES ------------------- */
+/* ------------------------------------------------------------------ */
+
 .instalaciones {
-  /* position: relative; */
+  position: relative;
   grid-area: instalaciones;
-  background-color: rgb(78, 78, 78);
-  color: darkgrey;
-  /* background-color: #fff; */
+  /* background-color: var(--color5); */
+  color: var(--color5);
+  background-color: #fff;
+  padding-bottom: 50px;
 }
 
 .video {
@@ -137,6 +213,7 @@ h4 {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  margin: 25px 0;
 }
 
 .insta_list {
@@ -167,8 +244,8 @@ h4 {
   height: 100%;
   max-height: 100%;
   display: none;
-  box-shadow: 0px 0px 40px #000000;
-  border-radius: 40px;
+  box-shadow: 0px 0px 20px #000000;
+  border-radius: 30px;
 }
 
 .prev,
@@ -191,19 +268,25 @@ h4 {
   right: 0;
 }
 
+/* ------------------------------------------------------------------ */
+/* ------------------------ SECCION EQUIPO -------------------------- */
+/* ------------------------------------------------------------------ */
+
 .equipo {
   position: relative;
-  background-color: rgba(95, 95, 95, 0.5);
   width: 100%;
   grid-area: equipo;
   margin-top: 10px;
   margin-bottom: 10px;
+  padding: 0 0 0 0;
+  margin: 0 0 60px 0;
 }
 
 .equipos {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
 }
 
 .cards {
@@ -214,6 +297,7 @@ h4 {
   perspective: 1000px;
   margin: auto;
   position: relative;
+  margin: 25px;
 }
 
 .imgProfe {
@@ -253,13 +337,18 @@ h4 {
   transform: rotateY(180deg);
 }
 
+/* ------------------------------------------------------------------ */
+/* ------------------------ SECCION CLASES -------------------------- */
+/* ------------------------------------------------------------------ */
+
 .clases {
   grid-area: clases;
-  background-color: rgb(78, 78, 78);
+  background-color: var(--color5);
   width: 100%;
   color: darkgrey;
   text-align: center;
-  margin: auto;
+  margin:  auto;
+  padding: 10px 0 50px 0;
 }
 
 .imghorarios {
@@ -274,8 +363,7 @@ h4 {
 
 .contactenos {
   grid-area: contactenos;
-  padding-bottom: 50px;
-  /* background-color: rgb(255, 255, 255, 0.5); */
+  padding-bottom: 60px;
 }
 
 .contactanos__cont{
@@ -284,7 +372,6 @@ h4 {
 .contactanos__cont > div{
   width: 50%;
 }
-
 /*-------- formulaio contacto --------*/
 
 .contacto__formulario{
@@ -354,8 +441,7 @@ h4 {
     transition: all 0.5s ease-out;
 }
 .contacto__btn-enviar:hover{
-    background-color: hsl(154, 65%, 68%);
-
+    background-color: hsl(154, 93%, 6%);
 }
 
 /* validaciones */
@@ -363,9 +449,6 @@ h4 {
 .activo .contacto_formulario-iconoError{
     opacity: 1;
 }
-/* .contacto__formulario-mensajeError{
-    display: block;
-} */
 .activo .contacto__formulario-mensajeError{
     display: block;
 }
@@ -390,13 +473,13 @@ h4 {
 
 .contactanos__cont > div:last-child h3{
   font-size: 2em;
+  margin-bottom: 30px;
 }
 
-
 .mapa {
-  box-shadow: 0px 0px 40px #000000;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
   border-radius: 40px;
-  width: 70%;
+  width: 85%;
 }
 
 
@@ -407,80 +490,42 @@ h4 {
   background-color: rgba(43, 43, 43, 0.5);
   grid-area: footer;
   text-align: center;
+  padding: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-text {
+  flex: 1;
+  text-align: left;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 20px; 
 }
 
 .imgfooter {
   width: 40px;
-  margin: auto;
-  margin-left: 30px;
-  display: inline-block;
   filter: drop-shadow(4px 4px 4px rgba(221, 221, 221, 0.63));
 }
 
-.navbtn > a,
-.navbtn2 > a {
-  color: rgb(236, 236, 236);
-  text-decoration: none;
-  padding: 5px 10px 5px 10px;
-  display: inline-block;
-}
-
-.navbtn > a:hover,
-.navbtn2 > a:hover,
-.checkbtn:hover {
-  background-color: rgb(255, 255, 0, 0.6);
-  color: rgb(82, 82, 82);
-  padding: 1px 2px 1px 2px;
-  border-radius: 5px;
-  transition: 0.5s;
-}
-
-.menuhorizontal .navbtn {
-  display: inline-block;
-  list-style: none;
-  box-sizing: border-box;
-}
-
-.checker {
-  display: none;
-}
-
-.checkbtn {
-  display: none;
-  cursor: pointer;
-  position: absolute;
-  top: 0px;
-  right: 20px;
-  padding: 0px;
-  margin: 0px;
-}
-
-.menuvertical {
-  display: none;
-  position: absolute;
-  top: 18px;
-  right: 20px;
-}
-
-.navbtn2 {
-  color: rgb(236, 236, 236);
-  list-style: none;
-  text-decoration: none;
-  text-align: center;
-  box-sizing: border-box;
-  background-color: rgb(255, 255, 255, 0.4);
-  display: block;
-}
 
 /* ------------------------------------------------------------------ */
-/* ------------------------ SECCION SUSCRIPCION ------------------------ */
+/* ------------------------ SECCION SUSCRIPCION --------------------- */
 /* ------------------------------------------------------------------ */
+
+.contenedor_suscription{
+  background-color: var(--color1);
+  
+}
 
 .suscripcion{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: aqua;
+  
 }
 
 .suscripcion__cont{
@@ -490,17 +535,18 @@ h4 {
   padding: 20px;
   border-radius: 20px;
   position: absolute;
+  animation-name: escalaImagen;
+  animation-duration: 0.5s;
+
 }
 
 .suscripcion__cont > h2{
   font-size: 1.5rem;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   color: #fff;
 }
-.suscripcion__cont div div{
- 
-}
+
 .suscripcion__cont p{
   color: bisque;
   margin: 10px 0;
@@ -511,22 +557,17 @@ h4 {
 .suscripcion__formulario{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
+  grid-gap: 25px;
 }
 
 .suscripcion__formulario > div{
   display: grid;
 }
 
-.suscripcion__formulario-grupo{
-  padding: 0px 0;
-}
 .suscripcion__formulario-grupo label:first-child{
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
-.suscripcion__formulario-grupo > input{
-  margin-top: 5px;
-}
+
 .suscripcion__formulario-grupo div{
   display: flex;
   align-items: center;
@@ -551,11 +592,11 @@ h4 {
 .suscripcion__formulario-input,
 .suscripcion__formulario-input-select{
     width: 100%;
-    padding: 2px 15px;
+    padding: 2px 12px;
     border-radius: 5px;
     border: 2px solid var(--GrayishBlue);
     font-weight: 600;
-    margin-top: 4px;
+    margin-top: 2px;
 }
 .suscripcion__formulario-input:focus{
    outline: none;
@@ -589,7 +630,7 @@ h4 {
     cursor: pointer;
     text-transform: uppercase;
     font-weight: 600;
-    margin-top: 5px;
+    margin-top: 3px;
     box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.3);
     transition: all 0.5s ease-out;
 }
@@ -616,27 +657,24 @@ h4 {
     
 }
 
-
-
-@media screen and (max-width: 1200px) {
-  .home {
-    min-height: 500px;
-  }
-  .homebackground {
-    min-height: 800px;
-    background-position: top -100px right;
-  }
-
-  .cards {
-    width: 180px;
-    height: 240px;
-  }
-
-  .imgProfe {
-    width: 180px;
-    height: 240px;
-  }
+@keyframes escalaImagen{
+    0%{transform: scale(0);}
+    10%{transform: scale(0.1);}
+    20%{transform: scale(0.2);}
+    30%{transform: scale(0.3);}
+    40%{transform: scale(0.4);}
+    50%{transform: scale(0.5);}
+    60%{transform: scale(0.6);}
+    70%{transform: scale(0.7);}
+    80%{transform: scale(0.8);}
+    90%{transform: scale(0.9);}
+    100%{transform: scale(1);}
 }
+
+
+/* ------------------------------------------------------------------ */
+/* ------------------------ MEDIA QUERY ----------------------------- */
+/* ------------------------------------------------------------------ */
 
 @media screen and (max-width: 600px) {
   .menuhorizontal .navbtn {
@@ -678,5 +716,114 @@ h4 {
   }
   .contactanos__cont > div{
   width: 100%;
+  }
+
+.hometext {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 6.8vw;
+  width: 90%;
 }
+.homebtn {
+  font-size: 4.8vw;
+  margin-top: 50px;
 }
+
+.section__titulo{
+  font-size: 5.5vw;
+}
+
+.carousel {
+  width: 95%;
+}
+.img-carousel {
+  border-radius: 10px;
+}
+
+.contactanos__cont > div:first-child{
+  margin-top: 30px;
+}
+.footer {
+  flex-direction: column-reverse;
+
+}
+.footer-text{
+  text-align: center;
+}
+.footer-icons{
+  margin-bottom: 50px;
+}
+.mapa{
+  width: 95%;
+}
+.contacto__formulario{
+  width: 90%;
+}
+.suscripcion{
+  height: auto;
+}
+
+.suscripcion__formulario{
+  grid-template-columns: 1fr;
+  grid-gap: 25px;
+}
+
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    .contactanos__cont{
+    flex-direction:column-reverse;
+  }
+  .contactanos__cont > div{
+  width: 100%;
+  }
+  .contactanos__cont > div:first-child{
+  margin-top: 30px;
+}
+.mapa{
+  width: 90%;
+}
+.contacto__formulario{
+  max-width: 80%;
+}
+
+}
+
+@media screen and (min-width: 901px) and (max-width: 1600px) {
+  .home {
+    min-height: 500px;
+  }
+ 
+  .cards {
+    width: 180px;
+    height: 240px;
+  }
+
+  .imgProfe {
+    width: 180px;
+    height: 240px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .home {
+    min-height: 500px;
+  }
+  .homebackground {
+    min-height: 800px;
+    background-position: top -100px right;
+  }
+
+  .cards {
+    width: 180px;
+    height: 240px;
+  }
+
+  .imgProfe {
+    width: 180px;
+    height: 240px;
+  }
+}
+

@@ -15,34 +15,39 @@
   </head>
 
   <body class="contenedor">
-    <nav class="nav">
-      <input type="checkbox" name="" id="check" class="checker" />
-      <label for="check" class="checkbtn">
-        <img src="./icons/signal-4-regular-24.png" alt="" />
-      </label>
-      <div class="menuvertical">
-        <ul>
-          <li class="navbtn2"><a href="#home">Home</a></li>
-          <li class="navbtn2"><a href="#insta">Instalaciones</a></li>
-          <li class="navbtn2"><a href="#equipo">Equipo</a></li>
-          <li class="navbtn2"><a href="#clases">Clases</a></li>
-          <li class="navbtn2"><a href="#contact">Contactanos</a></li>
+  <!-- ------------------------------------------------------- -->
+  <!-------------------- HEADER  -------------------------------->
+  <!-- ------------------------------------------------------- -->
+    <header class="header">
+      <nav class="nav">
+        <input type="checkbox" name="" id="check" class="checker" />
+        <label for="check" class="checkbtn">
+          <img src="./icons/signal-4-regular-24.png" alt="" />
+        </label>
+        <div class="menuvertical">
+          <ul>
+            <li class="navbtn2"><a href="#home">Home</a></li>
+            <li class="navbtn2"><a href="#insta">Instalaciones</a></li>
+            <li class="navbtn2"><a href="#equipo">Equipo</a></li>
+            <li class="navbtn2"><a href="#clases">Clases</a></li>
+            <li class="navbtn2"><a href="#contact">Contactanos</a></li>
+          </ul>
+        </div>
+
+        <ul class="menuhorizontal">
+          <li class="navbtn"><a href="#home">Home</a></li>
+          <li class="navbtn"><a href="#insta">Instalaciones</a></li>
+          <li class="navbtn"><a href="#equipo">Equipo</a></li>
+          <li class="navbtn"><a href="#clases">Clases</a></li>
+          <li class="navbtn"><a href="#contact">Contactanos</a></li>
         </ul>
-      </div>
+      </nav>
+    </header>
 
-      <ul class="menuhorizontal">
-        <li class="navbtn"><a href="#home">Home</a></li>
-        <li class="navbtn"><a href="#insta">Instalaciones</a></li>
-        <li class="navbtn"><a href="#equipo">Equipo</a></li>
-        <li class="navbtn"><a href="#clases">Clases</a></li>
-        <li class="navbtn"><a href="#contact">Contactanos</a></li>
-      </ul>
-    </nav>
-
+<main>
 <!-- ------------------------------------------------------- -->
 <!-------------------- SECCION HOME --------------------------->
 <!-- ------------------------------------------------------- -->
-
     <section class="home" id="home">
       <div class="homebackground"></div>
       <div class="hometext">
@@ -52,7 +57,7 @@
           Es tiempo de <span>Gimnasio</span>
         </h3>
 
-        <a href="./pages/subscriptions.html">
+        <a href="./pages/subscriptions.html" target="_blank">
         <button class="homebtn">Sumate</button></a>
       </div>
     </section>
@@ -66,7 +71,7 @@
       <div class="video">
         <video autoplay loop muted width="100%" src="./videos/4920813-hd_1920_1080_25fps.mp4" >Tu navegador no soporta el video</video>
       </div>
-      <h4 id="insta">Nuestras Instalaciones</h4>
+      <h4 class="section__titulo" id="insta">Nuestras Instalaciones</h4>
       <div>
         <ul class="insta_table">
           <li class="insta_list">
@@ -118,8 +123,8 @@
 <!-------------------- SECCION EQUIPO ------------------------->
 <!-- ------------------------------------------------------- -->
 
-    <section class="equipo" id="equipo">
-      <h4>Nuestro Equipo</h4>
+    <section class="equipo" >
+      <h4 id="equipo" class="section__titulo">Nuestro Equipo</h4>
       <div class="equipos">
       <!-- <div class="cards">
         <div class="flip-card">
@@ -136,17 +141,21 @@
       </div>
       </section>
 
-      <section class="clases" id="clases">
-        <h4>Horarios de Clases</h4>
-        <img class="imghorarios" src="./images/Horarios.png" alt="">
+<!-- ------------------------------------------------------- -->
+<!-------------------- SECCION CLASES ------------------------->
+<!-- ------------------------------------------------------- -->
+
+      <section class="clases" >
+          <h4 id="clases" class="section__titulo">Horarios de Clases</h4>
+          <img class="imghorarios" src="./images/Horarios.png" alt="">
       </section>
 
 <!-- ------------------------------------------------------- -->
 <!-------------------- SECCION CONTACTO ----------------------->
 <!-- ------------------------------------------------------- -->
 
-      <section class="contactenos" id="contact">
-        <h4>Contactanos</h4>
+      <section class="contactenos" >
+        <h4 id="contact" class="section__titulo">Contactanos</h4>
 
         <div class="contactanos__cont">
 
@@ -206,16 +215,25 @@
         </div>
       </section>
 
-    <footer class="footer">
-      <p style="font-style: italic;">"Página creada como parte de la formación de CODO a CODO, comisión 24178 1er cuatrimestre 2024"</p> 
-      <a href="mailto:info@gymcodoacodo.com">
-        <img class="imgfooter" src="./icons/bxl-gmail.png" alt=""></a>
-      <a href="https://www.instagram.com/programacodoacodo/?hl=es">
-        <img class="imgfooter" src="./icons/bxl-instagram-alt.png" alt=""></a>  
-      <a href="https://wa.me/+5491188888888">
-        <img class="imgfooter" src="./icons/bxl-whatsapp.png" alt=""></a>  
+<!-- ------------------------------------------------------- -->
+<!-------------------- SECCION FOOTER ------------------------->
+<!-- ------------------------------------------------------- -->
 
-    </footer>
+    <footer class="footer">
+  <div class="footer-text">
+    <p style="font-style: italic;">"Página creada como parte de la formación de CODO a CODO, comisión 24178 1er cuatrimestre 2024"</p>
+  </div>
+  <div class="footer-icons">
+    <a href="mailto:info@gymcodoacodo.com">
+      <img class="imgfooter" src="./icons/bxl-gmail.png" alt=""></a>
+    <a href="https://www.instagram.com/programacodoacodo/?hl=es">
+      <img class="imgfooter" src="./icons/bxl-instagram-alt.png" alt=""></a>  
+    <a href="https://wa.me/+5491188888888">
+      <img class="imgfooter" src="./icons/bxl-whatsapp.png" alt=""></a>
+  </div>
+</footer>
+
+  </main>
     
     <script src="./js/script.js"></script>
     <script type="module" src="./js/formContacto.js"></script>
