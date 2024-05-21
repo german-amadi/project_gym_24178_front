@@ -24,6 +24,7 @@
   --color3: rgb(182, 182, 182);
   --color4: rgb(82, 82, 82);
   --color5: rgb(78, 78, 78);
+  --color6: rgb(27, 27, 27);
     
   --Red: hsl(0, 100%, 74%) ;
   --Green: hsl(154, 59%, 51%);
@@ -35,7 +36,7 @@
 .section__titulo {
   font-family: var(--fuente2);
   font-size: 2.8vw;
-  color: rgb(27, 27, 27);
+  color: var(--color6);
   text-align: center;
   filter: drop-shadow(4px 4px 4px rgba(221, 221, 221, 0.63));
   margin: 50px 0;
@@ -155,7 +156,8 @@
   width: 100%;
   min-height: 600px;
   background-position: top -140px right;
-  height: 115%;
+  height: 150%;
+  /* height: 100vh; */
 }
 
 .hometext {
@@ -204,8 +206,8 @@
 }
 
 .video {
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  justify-content: center; */
 }
 
 .insta_table {
@@ -525,7 +527,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  background: linear-gradient(to top, #000080, #1e3c72, #2a5298, #3b7dd8, #82cfff);
+  /* height: auto; */
 }
 
 .suscripcion__cont{
@@ -534,10 +537,9 @@
   width: 70%;
   padding: 20px;
   border-radius: 20px;
-  position: absolute;
   animation-name: escalaImagen;
   animation-duration: 0.5s;
-
+  margin: 50px 0;
 }
 
 .suscripcion__cont > h2{
@@ -557,7 +559,7 @@
 .suscripcion__formulario{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 25px;
+  grid-gap: 30px;
 }
 
 .suscripcion__formulario > div{
@@ -691,7 +693,7 @@
     display: block;
     text-align: center;
   }
-
+  
   .checker:checked ~ .menuvertical {
     display: block;
   }
@@ -710,7 +712,6 @@
     font-size: 12px;
   }
 
-  /* seccion contacto */
   .contactanos__cont{
     flex-direction:column-reverse;
   }
@@ -732,7 +733,8 @@
 }
 
 .section__titulo{
-  font-size: 5.5vw;
+  font-size: 6.5vw;
+  
 }
 
 .carousel {
@@ -770,6 +772,10 @@
   grid-gap: 25px;
 }
 
+.suscripcion__cont{
+  width: 95%;
+}
+
 }
 
 @media screen and (min-width: 601px) and (max-width: 900px) {
@@ -787,6 +793,9 @@
 }
 .contacto__formulario{
   max-width: 80%;
+}
+.suscripcion__cont{
+  width: 90%;
 }
 
 }
@@ -807,23 +816,4 @@
   }
 }
 
-@media screen and (max-width: 1200px) {
-  .home {
-    min-height: 500px;
-  }
-  .homebackground {
-    min-height: 800px;
-    background-position: top -100px right;
-  }
-
-  .cards {
-    width: 180px;
-    height: 240px;
-  }
-
-  .imgProfe {
-    width: 180px;
-    height: 240px;
-  }
-}
 
